@@ -1,1 +1,11 @@
-﻿
+﻿/* Make the image fully responsive */
+.carousel-inner img {
+    height: 100%;
+    width: 33vw;
+    position:relative;
+    text-align:center;
+}
+.carouselcontainer {
+    height: 100%;
+    width: 33vw;
+}
