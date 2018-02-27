@@ -1,0 +1,12 @@
+﻿.col-4{
+    height:200px;
+    background-color:red;
+}
+.col-8{
+    height:200px;
+    background-color:blue;
+}
+.row{
+    height:200px;
+    background-color:green;
+}

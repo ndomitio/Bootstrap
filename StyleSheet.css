@@ -9,3 +9,642 @@
     height: 100%;
     width: 33vw;
 }
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900");
+@import url("https://cdn.linearicons.com/free/1.0.0/icon-font.min.css");
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.weather-card {
+    margin: 60px auto;
+    height: 740px;
+    width: 450px;
+    background: #fff;
+    box-shadow: 0 1px 38px rgba(0, 0, 0, 0.15), 0 5px 12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+    .weather-card .top {
+        position: relative;
+        height: 570px;
+        width: 100%;
+        overflow: hidden;
+        background: url("https://s-media-cache-ak0.pinimg.com/564x/cf/1e/c4/cf1ec4b0c96e59657a46867a91bb0d1e.jpg") no-repeat;
+        background-size: cover;
+        background-position: center center;
+        text-align: center;
+    }
+
+        .weather-card .top .wrapper {
+            padding: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+            .weather-card .top .wrapper .mynav {
+                height: 20px;
+            }
+
+                .weather-card .top .wrapper .mynav .lnr {
+                    color: #fff;
+                    font-size: 20px;
+                }
+
+                .weather-card .top .wrapper .mynav .lnr-chevron-left {
+                    display: inline-block;
+                    float: left;
+                }
+
+                .weather-card .top .wrapper .mynav .lnr-cog {
+                    display: inline-block;
+                    float: right;
+                }
+
+            .weather-card .top .wrapper .heading {
+                margin-top: 20px;
+                
+                font-size: 35px;
+                font-weight: 400;
+                color: #fff;
+            }
+
+            .weather-card .top .wrapper .location {
+                margin-top: 20px;
+                font-size: 21px;
+                font-weight: 400;
+                color: #fff;
+            }
+
+            .weather-card .top .wrapper .temp {
+                margin-top: 20px;
+                display:flex;
+                align-items:center;
+            }
+
+                .weather-card .top .wrapper .temp a {
+                    text-decoration: none;
+                    color: #fff;
+                }
+
+                    .weather-card .top .wrapper .temp a .temp-type {
+                        font-size: 85px;
+                        margin-top:40px;
+                    }
+
+                .weather-card .top .wrapper .temp .temp-value {
+                    display: inline-block;
+                    font-size: 85px;
+                    font-weight: 600;
+                    color: #fff;
+                    margin-top:40px;
+                }
+
+                .weather-card .top .wrapper .temp .deg {
+                    display: inline-block;
+                    font-size: 35px;
+                    font-weight: 600;
+                    color: #fff;
+                    vertical-align: top;
+                    margin-top: 10px;
+                }
+
+        .weather-card .top:after {
+            content: "";
+            height: 100%;
+            width: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+    .weather-card .bottom {
+        padding: 0 30px;
+        background: #fff;
+    }
+
+        .weather-card .bottom .wrapper .forecast {
+            overflow: hidden;
+            margin: 0;
+            font-size: 0;
+            padding: 0;
+            padding-top: 20px;
+            max-height: 155px;
+        }
+
+            .weather-card .bottom .wrapper .forecast a {
+                text-decoration: none;
+                color: #000;
+            }
+
+            .weather-card .bottom .wrapper .forecast .go-up {
+                text-align: center;
+                display: block;
+                font-size: 25px;
+                margin-bottom: 10px;
+            }
+
+            .weather-card .bottom .wrapper .forecast li {
+                display: block;
+                font-size: 25px;
+                font-weight: 400;
+                color: rgba(0, 0, 0, 0.25);
+                line-height: 1em;
+                margin-bottom: 30px;
+            }
+
+                .weather-card .bottom .wrapper .forecast li .date {
+                    display: inline-block;
+                }
+
+                .weather-card .bottom .wrapper .forecast li .condition {
+                    display: inline-block;
+                    vertical-align: middle;
+                    float: right;
+                    font-size: 25px;
+                }
+
+                    .weather-card .bottom .wrapper .forecast li .condition .temp {
+                        display: inline-block;
+                        vertical-align: top;
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 20px;
+                        font-weight: 400;
+                        padding-top: 2px;
+                    }
+
+                        .weather-card .bottom .wrapper .forecast li .condition .temp .deg {
+                            display: inline-block;
+                            font-size: 10px;
+                            font-weight: 600;
+                            margin-left: 3px;
+                            vertical-align: top;
+                        }
+
+                        .weather-card .bottom .wrapper .forecast li .condition .temp .temp-type {
+                            font-size: 20px;
+                        }
+
+                .weather-card .bottom .wrapper .forecast li.active {
+                    color: rgba(0, 0, 0, 0.8);
+                }
+
+    .weather-card.rain .top {
+        background: url("http://img.freepik.com/free-vector/girl-with-umbrella_1325-5.jpg?size=338&ext=jpg") no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+
+
+h1 {
+    display:flex;
+    flex-direction:row;
+    margin: 0;
+    padding: 0;
+   
+ 
+   
+    
+}
+
+    h1 span1 {
+        color: #17a2b8;
+        background: #fff;
+        padding: 10px 20px;
+        font-family: arial;
+        display: table-cell;
+        box-shadow: inset 0 0 5px rgba(0,0,0,.3), 0 5px 0 #ccc;
+        animation: animate .5s infinite;
+    }
+
+@keyframes animate {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+h1 span1:nth-child(1) {
+    animation-delay: .2s;
+}
+
+h1 span1:nth-child(2) {
+    animation-delay: .4s;
+}
+
+h1 span1:nth-child(3) {
+    animation-delay: .6s;
+}
+
+h1 span1:nth-child(4) {
+    animation-delay: .8s;
+}
+
+h1 span1:nth-child(5) {
+    animation-delay: .10s;
+}
+
+h1 span1:nth-child(6) {
+    animation-delay: .2s;
+}
+
+h1 span1:nth-child(7) {
+    animation-delay: .4s;
+}
+h1 span1:nth-child(8) {
+    animation-delay: .6s;
+}
+h1 span1:nth-child(9) {
+    animation-delay: .8s;
+}
+
+
+
+
+h1 {
+    margin: 0 0 15px;
+    padding: 15px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: normal;
+    text-align: center;
+    background-color: #1f90ff;
+}
+
+form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.board {
+    position: relative;
+    width: 450px;
+    height: 450px;
+}
+
+.field {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    padding: 75px 0 0 0;
+    box-sizing: border-box;
+    width: 420px;
+    height: 435px;
+    overflow: hidden;
+    cursor: not-allowed;
+}
+
+.grid {
+    display: inline-flex;
+    flex-flow: column wrap;
+    position: relative;
+    min-width: 420px;
+    height: 360px;
+    counter-reset: player 1;
+}
+
+.column {
+    display: inline-flex;
+    flex-flow: column wrap;
+    height: 360px;
+}
+
+.front {
+    position: absolute;
+    top: 60px;
+    border: 15px solid #007fff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 450px;
+    height: 390px;
+    pointer-events: none;
+    background: radial-gradient(circle, transparent, transparent 18px, #007fff 20px, #007fff 23px, #1f90ff 23px, #1f90ff 36px, #007fff) center top/60px 60px;
+}
+
+/* Invisible inputs */
+input {
+    display: none;
+    position: absolute;
+    top: -90px;
+    margin: 0;
+    width: 60px;
+    height: 450px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+    input:indeterminate {
+        display: initial;
+    }
+/* Inputs for red */
+.column > input:nth-of-type(2n) {
+    right: 360px;
+}
+
+.column > .column > input:nth-of-type(2n) {
+    right: 300px;
+}
+
+.column > .column > .column > input:nth-of-type(2n) {
+    right: 240px;
+}
+
+.column > .column > .column > .column > input:nth-of-type(2n) {
+    right: 180px;
+}
+
+.column > .column > .column > .column > .column > input:nth-of-type(2n) {
+    right: 120px;
+}
+
+.column > .column > .column > .column > .column > .column > input:nth-of-type(2n) {
+    right: 60px;
+}
+
+.column > .column > .column > .column > .column > .column > .column > input:nth-of-type(2n) {
+    right: 0;
+}
+/* Inputs for yellow */
+.column > input:nth-of-type(2n+1) {
+    left: 0;
+}
+
+.column > .column > input:nth-of-type(2n+1) {
+    left: 60px;
+}
+
+.column > .column > .column > input:nth-of-type(2n+1) {
+    left: 120px;
+}
+
+.column > .column > .column > .column > input:nth-of-type(2n+1) {
+    left: 180px;
+}
+
+.column > .column > .column > .column > .column > input:nth-of-type(2n+1) {
+    left: 240px;
+}
+
+.column > .column > .column > .column > .column > .column > input:nth-of-type(2n+1) {
+    left: 300px;
+}
+
+.column > .column > .column > .column > .column > .column > .column > input:nth-of-type(2n+1) {
+    left: 360px;
+}
+
+/* Disc */
+.disc {
+    position: relative;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    background: radial-gradient(circle, currentcolor 12px, #666 13px, currentcolor 14px, currentcolor 21px, #666 22px, transparent 23px, transparent) center/60px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s, top 0s 0.2s, color 0s 0.2s;
+}
+
+/* Red's turn */
+input:hover + .disc {
+    color: #ff010b;
+    opacity: 1;
+    transition: opacity 0.2s, top 0s;
+}
+
+input:checked + .disc {
+    color: #ff010b;
+    opacity: 1;
+}
+/* Yellow's turn */
+input:hover + input + .disc {
+    color: #ffd918;
+    opacity: 1;
+    transition: opacity 0.2s, top 0s;
+}
+
+input:checked + input + .disc {
+    color: #ffd918;
+    opacity: 1;
+}
+
+/* Height and time of disc fall per row */
+input:hover + .disc:nth-of-type(1),
+input:hover + input + .disc:nth-of-type(1) {
+    top: -75px;
+}
+
+input:checked + .disc:nth-of-type(1),
+input:checked + input + .disc:nth-of-type(1) {
+    transition: top 0.14s cubic-bezier(0.56, 0, 1, 1);
+}
+
+input:hover + .disc:nth-of-type(2),
+input:hover + input + .disc:nth-of-type(6n+2) {
+    top: -135px;
+}
+
+input:checked + .disc:nth-of-type(2),
+input:checked + input + .disc:nth-of-type(2) {
+    transition: top 0.19s cubic-bezier(0.56, 0, 1, 1);
+}
+
+input:hover + .disc:nth-of-type(3),
+input:hover + input + .disc:nth-of-type(3) {
+    top: -195px;
+}
+
+input:checked + .disc:nth-of-type(3),
+input:checked + input + .disc:nth-of-type(3) {
+    transition: top 0.23s cubic-bezier(0.56, 0, 1, 1);
+}
+
+input:hover + .disc:nth-of-type(4),
+input:hover + input + .disc:nth-of-type(4) {
+    top: -255px;
+}
+
+input:checked + .disc:nth-of-type(4),
+input:checked + input + .disc:nth-of-type(4) {
+    transition: top 0.26s cubic-bezier(0.56, 0, 1, 1);
+}
+
+input:hover + .disc:nth-of-type(5),
+input:hover + input + .disc:nth-of-type(5) {
+    top: -315px;
+}
+
+input:checked + .disc:nth-of-type(5),
+input:checked + input + .disc:nth-of-type(5) {
+    transition: top 0.29s cubic-bezier(0.56, 0, 1, 1);
+}
+
+input:hover + .disc:nth-of-type(6n),
+input:hover + input + .disc:nth-of-type(6n) {
+    top: -375px;
+}
+
+input:checked + .disc:nth-of-type(6n),
+input:checked + input + .disc:nth-of-type(6n) {
+    transition: top 0.32s cubic-bezier(0.56, 0, 1, 1);
+}
+
+/* Tracking turns */
+input:checked + .disc {
+    counter-increment: player 2;
+}
+
+input:checked + input + .disc {
+    counter-increment: player -2;
+}
+
+.grid::after {
+    content: counter(player, lower-roman);
+    display: inline-block;
+    max-width: 840px;
+    min-width: 420px;
+    letter-spacing: 375px;
+    font-family: monospace;
+    font-size: 1px;
+    overflow: hidden;
+}
+
+/* Draw outcome */
+form:valid .column > .column > .column > .column > .column > .column > .column > .column::after {
+    content: "It's a draw!";
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: -75px;
+    width: 420px;
+    height: 435px;
+    visibility: visible;
+    color: #1f90ff;
+    font-size: 30px;
+    text-align: center;
+    line-height: 60px;
+    cursor: initial;
+    pointer-events: auto;
+    animation: outcome 1.5s;
+}
+
+/* Red column win */
+input:checked + .disc + input + input:checked + .disc + input + input:checked + .disc + input + input:checked ~ .column::after,
+/* Red row win */
+input:nth-of-type(2):checked ~ .column > input:nth-of-type(2):checked ~ .column > input:nth-of-type(2):checked ~ .column > input:nth-of-type(2):checked ~ .column::after,
+input:nth-of-type(4):checked ~ .column > input:nth-of-type(4):checked ~ .column > input:nth-of-type(4):checked ~ .column > input:nth-of-type(4):checked ~ .column::after,
+input:nth-of-type(6):checked ~ .column > input:nth-of-type(6):checked ~ .column > input:nth-of-type(6):checked ~ .column > input:nth-of-type(6):checked ~ .column::after,
+input:nth-of-type(8):checked ~ .column > input:nth-of-type(8):checked ~ .column > input:nth-of-type(8):checked ~ .column > input:nth-of-type(8):checked ~ .column::after,
+input:nth-of-type(10):checked ~ .column > input:nth-of-type(10):checked ~ .column > input:nth-of-type(10):checked ~ .column > input:nth-of-type(10):checked ~ .column::after,
+input:nth-of-type(12):checked ~ .column > input:nth-of-type(12):checked ~ .column > input:nth-of-type(12):checked ~ .column > input:nth-of-type(12):checked ~ .column::after,
+/* Red diagonal win */
+input:nth-of-type(2):checked ~ .column > input:nth-of-type(4):checked ~ .column > input:nth-of-type(6):checked ~ .column > input:nth-of-type(8):checked ~ .column::after,
+input:nth-of-type(4):checked ~ .column > input:nth-of-type(6):checked ~ .column > input:nth-of-type(8):checked ~ .column > input:nth-of-type(10):checked ~ .column::after,
+input:nth-of-type(6):checked ~ .column > input:nth-of-type(8):checked ~ .column > input:nth-of-type(10):checked ~ .column > input:nth-of-type(12):checked ~ .column::after,
+input:nth-of-type(8):checked ~ .column > input:nth-of-type(6):checked ~ .column > input:nth-of-type(4):checked ~ .column > input:nth-of-type(2):checked ~ .column::after,
+input:nth-of-type(10):checked ~ .column > input:nth-of-type(8):checked ~ .column > input:nth-of-type(6):checked ~ .column > input:nth-of-type(4):checked ~ .column::after,
+input:nth-of-type(12):checked ~ .column > input:nth-of-type(10):checked ~ .column > input:nth-of-type(8):checked ~ .column > input:nth-of-type(6):checked ~ .column::after {
+    content: "Red wins! :)";
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: -75px;
+    width: 420px;
+    height: 435px;
+    visibility: visible;
+    color: #ff010b;
+    font-size: 30px;
+    text-align: center;
+    line-height: 60px;
+    cursor: initial;
+    pointer-events: auto;
+    animation: outcome 1s;
+}
+
+/* Yellow column win */
+input:checked + input + .disc + input:checked + input + .disc + input:checked + input + .disc + input:checked ~ .column::after,
+/* Yellow row win */
+input:nth-of-type(1):checked ~ .column > input:nth-of-type(1):checked ~ .column > input:nth-of-type(1):checked ~ .column > input:nth-of-type(1):checked ~ .column::after,
+input:nth-of-type(3):checked ~ .column > input:nth-of-type(3):checked ~ .column > input:nth-of-type(3):checked ~ .column > input:nth-of-type(3):checked ~ .column::after,
+input:nth-of-type(5):checked ~ .column > input:nth-of-type(5):checked ~ .column > input:nth-of-type(5):checked ~ .column > input:nth-of-type(5):checked ~ .column::after,
+input:nth-of-type(7):checked ~ .column > input:nth-of-type(7):checked ~ .column > input:nth-of-type(7):checked ~ .column > input:nth-of-type(7):checked ~ .column::after,
+input:nth-of-type(9):checked ~ .column > input:nth-of-type(9):checked ~ .column > input:nth-of-type(9):checked ~ .column > input:nth-of-type(9):checked ~ .column::after,
+input:nth-of-type(11):checked ~ .column > input:nth-of-type(11):checked ~ .column > input:nth-of-type(11):checked ~ .column > input:nth-of-type(11):checked ~ .column::after,
+/* Yellow diagonal win */
+input:nth-of-type(1):checked ~ .column > input:nth-of-type(3):checked ~ .column > input:nth-of-type(5):checked ~ .column > input:nth-of-type(7):checked ~ .column::after,
+input:nth-of-type(3):checked ~ .column > input:nth-of-type(5):checked ~ .column > input:nth-of-type(7):checked ~ .column > input:nth-of-type(9):checked ~ .column::after,
+input:nth-of-type(5):checked ~ .column > input:nth-of-type(7):checked ~ .column > input:nth-of-type(9):checked ~ .column > input:nth-of-type(11):checked ~ .column::after,
+input:nth-of-type(7):checked ~ .column > input:nth-of-type(5):checked ~ .column > input:nth-of-type(3):checked ~ .column > input:nth-of-type(1):checked ~ .column::after,
+input:nth-of-type(9):checked ~ .column > input:nth-of-type(7):checked ~ .column > input:nth-of-type(5):checked ~ .column > input:nth-of-type(3):checked ~ .column::after,
+input:nth-of-type(11):checked ~ .column > input:nth-of-type(9):checked ~ .column > input:nth-of-type(7):checked ~ .column > input:nth-of-type(5):checked ~ .column::after {
+    content: "Yellow wins! :)";
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: -75px;
+    width: 420px;
+    height: 435px;
+    visibility: visible;
+    color: #ffd918;
+    font-size: 30px;
+    text-align: center;
+    line-height: 60px;
+    background: linear-gradient(#fff 60px, transparent 60px, transparent);
+    cursor: initial;
+    pointer-events: auto;
+    animation: outcome 1s;
+}
+
+/* Button style */
+button {
+    margin: 20px auto;
+    border: none;
+    border-radius: 2px;
+    padding: 12px 18px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    background: #2196f3 center;
+    box-shadow: 0 0 4px #999;
+    outline: none;
+    transition: background 0.5s;
+}
+
+    button:hover {
+        background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+    }
+
+    button:active {
+        background-color: #6eb9f7;
+        background-size: 100%;
+        transition: background 0s;
+    }
+
+@keyframes outcome {
+    0% {
+        opacity: 0;
+    }
+
+    35% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
